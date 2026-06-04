@@ -1,15 +1,15 @@
-
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:"Segoe UI",sans-serif;
 }
 
 
 body{
     width: 100vw;
     height: 100vh;
+<<<<<<< HEAD
 }
 
 
@@ -49,4 +49,233 @@ body{
 .icon:hover{
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: 5px;
+=======
+    overflow:hidden;
+}
+/* TASKBAR*/
+
+.taskbar{
+    position:fixed;
+    bottom:0;
+    left:0;
+
+    width:100%;
+    height:48px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 12px;
+
+    background:rgba(243,246,251,0.78);
+
+    backdrop-filter:blur(30px);
+    -webkit-backdrop-filter:blur(30px);
+
+    border-top:1px solid rgba(255,255,255,0.8);
+
+    box-shadow:
+    0 -1px 0 rgba(255,255,255,.9),
+    0 -5px 20px rgba(0,0,0,.05);
+
+    z-index:1000;
+}
+
+/*WEATHER */
+
+.weather-widget{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    color:#222;
+    font-size:13px;
+}
+
+.weather-widget i{
+    font-size:18px;
+}
+
+.weather-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.weather-text small{
+    color:#666;
+}
+
+/*CENTER SECTION */
+
+.center-section{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+/*ICONS*/
+
+.taskbar-icon{
+    width:40px;
+    height:40px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    color:#222;
+    font-size:18px;
+
+    transition:all .2s ease;
+
+    position:relative;
+}
+
+.taskbar-icon:hover{
+    background:rgba(255,255,255,.65);
+    transform:translateY(-2px);
+}
+
+/* Active App Indicator */
+
+.taskbar-icon.active::after{
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+    height:3px;
+
+    bottom:2px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#0078d7;
+
+    border-radius:50px;
+}
+
+/*SEARCH BAR*/
+
+.search-box{
+    width:230px;
+    height:38px;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:0 15px;
+
+    border-radius:20px;
+
+    background:white;
+
+    border:1px solid #ddd;
+}
+
+.search-box i{
+    color:#666;
+}
+
+.search-box input{
+    width:100%;
+
+    border:none;
+    outline:none;
+
+    background:transparent;
+
+    font-size:14px;
+}
+
+.search-box input::placeholder{
+    color:#777;
+}
+
+/* SYSTEM TRAY */
+
+.system-tray{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* Tray Icons */
+
+.tray-icon{
+    width:24px;
+    height:24px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:4px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.tray-icon:hover{
+    background:rgba(255,255,255,.6);
+}
+
+.tray-icon i{
+    color:#222;
+    font-size:14px;
+}
+
+/*DATE TIME*/
+
+.datetime{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+
+    color:#222;
+
+    font-size:11px;
+
+    line-height:1.2;
+}
+
+/*RESPONSIVE*/
+
+@media(max-width:900px){
+
+    .weather-widget{
+    display:none;
+    }
+
+    .search-box{
+    width:170px;
+    }
+}
+
+@media(max-width:700px){
+
+    .search-box{
+    display:none;
+    }
+
+    .taskbar{
+    padding:0 8px;
+    }
+
+.center-section{
+  gap:2px;
+    }
+>>>>>>> 99c6f09 (My latest changes)
 }
